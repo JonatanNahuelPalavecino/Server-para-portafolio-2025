@@ -56,7 +56,7 @@ const signUp = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true, // Hace que la cookie no sea accesible desde JavaScript
       secure: process.env.NODE_ENV === "production", // Solo en HTTPS en producción
-      sameSite: "Lax", // Evita que la cookie se envíe en solicitudes de terceros
+      sameSite: "none", // Evita que la cookie se envíe en solicitudes de terceros
       maxAge: 36000000, // Expira junto con el token
     });
 
@@ -126,7 +126,7 @@ const signIn = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
+      sameSite: "none",
       maxAge: 36000000,
     });
 
@@ -178,7 +178,7 @@ const desactivateUser = async (req, res) => {
     res.clearCookie("token", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
+      sameSite: "none",
     });
 
     res.status(200).json(result);
@@ -218,7 +218,7 @@ const activateUser = async (req, res) => {
     res.clearCookie("token", {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
+      sameSite: "none",
     });
 
     res.status(200).json(result);
@@ -248,7 +248,7 @@ const signOut = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "Lax",
+    sameSite: "none",
   });
   res.json({ estado: "success", mensaje: "Sesión cerrada correctamente" });
 };
