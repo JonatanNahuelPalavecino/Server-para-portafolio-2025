@@ -16,7 +16,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // CORS
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: ['https://jonatanpalavecinodev.vercel.app/', 'http://localhost:5173'],
         credentials: true
     })
 );
