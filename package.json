@@ -1,0 +1,35 @@
+{
+  "name": "server-portfolio",
+  "version": "1.0.0",
+  "description": "Servidor creado para los datos de mi portafolio",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonatanNahuelPalavecino/Server-para-portafolio-2025.git"
+  },
+  "author": "Jonatan Palavecino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonatanNahuelPalavecino/Server-para-portafolio-2025/issues"
+  },
+  "homepage": "https://github.com/JonatanNahuelPalavecino/Server-para-portafolio-2025#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9",
+    "resend": "^4.1.2"
+  }
+}
