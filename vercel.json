@@ -9,7 +9,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "headers": {
+        "Access-Control-Allow-Origin": "https://jonatanpalavecinodev.vercel.app",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      },
+      "dest": "/index.js"
     }
   ]
 }
