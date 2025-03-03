@@ -2,8 +2,7 @@ const dayjs = require("dayjs");
 const { registrarVisita, buscarVisita } = require("../models/visitas.model");
 
 const addVisit = async (req, res) => {
-  const { ruta, user_agent, referer, id_usuario } = req.body;
-  const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+  const { ruta, user_agent, referer, id_usuario, ip } = req.body;
   const fecha = dayjs().format("DD/MM/YYYY");
 
   const filters = { ip, user_agent, ruta, fecha, id_usuario, referer };
