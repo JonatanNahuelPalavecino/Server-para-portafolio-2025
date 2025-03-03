@@ -16,7 +16,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // CORS
 app.use(
     cors({
-        origin: 'https://jonatanpalavecino.com.ar',
+        origin: 'https://www.jonatanpalavecino.com.ar',
         credentials: true
     })
 );
