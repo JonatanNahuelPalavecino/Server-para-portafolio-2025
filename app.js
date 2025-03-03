@@ -44,6 +44,6 @@ const contactRouter = require("./routes/contacto.routes")
 app.use("/contacto", contactRouter)
 
 const visitasRouter = require("./routes/visitas.routes")
-app.use("/api/datos", visitasRouter)
+app.use("/datos", visitasRouter)
 
 module.exports = app;
