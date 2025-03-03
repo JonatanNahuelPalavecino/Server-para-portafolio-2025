@@ -5,6 +5,10 @@ const addVisit = async (req, res) => {
   const { ruta, user_agent, referer, id_usuario, ip } = req.body;
   const fecha = dayjs().format("DD/MM/YYYY");
 
+  console.log(req.headers["x-forwarded-for"])
+  console.log(req.socket.remoteAddress)
+  console.log(ip)
+
   const filters = { ip, user_agent, ruta, fecha, id_usuario, referer };
 
   try {

@@ -5,6 +5,7 @@ const path = require('path');
 const cookieParser = require("cookie-parser")
 
 const app = express();
+app.set("trust proxy", true)
 
 // Middlewares
 app.use(cookieParser())
@@ -44,6 +45,6 @@ const contactRouter = require("./routes/contacto.routes")
 app.use("/contacto", contactRouter)
 
 const visitasRouter = require("./routes/visitas.routes")
-app.use("/datos", visitasRouter)
+app.use("/api/datos", visitasRouter)
 
 module.exports = app;
