@@ -5,7 +5,6 @@ const path = require('path');
 const cookieParser = require("cookie-parser")
 
 const app = express();
-app.set("trust proxy", true)
 
 // Middlewares
 app.use(cookieParser())
