@@ -19,7 +19,7 @@ const sendEmail = async (to, subject, route, data) => {
 
     try {
       const data = await resend.emails.send({
-        from: 'remitente@resend.dev',
+        from: 'no-reply@jonatanpalavecino.com.ar',
         to: to,
         subject: subject,
         html: htmlContent,
